@@ -20,8 +20,8 @@ import os
 import io  # 이미지를 메모리에 저장하기 위해 사용
 
 # 서버 구동시
-# from keep_alive import keep_alive
-# keep_alive()
+from keep_alive import keep_alive
+keep_alive()
 
 # 인텐트 설정
 intents = discord.Intents.default()

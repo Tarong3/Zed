@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from dotenv import load_dotenv
@@ -30,7 +30,7 @@ intents.voice_states = True
 intents.members = True
 intents.message_content = True 
 
-chrome_driver_path = './chromedriver.exe'
+# chrome_driver_path = './chromedriver.exe'
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 # 수면 예약 관리용 딕셔너리
@@ -438,7 +438,7 @@ def create_stat_image(nickname, 전적_데이터, 티어이름):
 async def on_ready():
     print(f'Logged in as {bot.user}!')
 
-@bot.command()
+'''@bot.command()
 async def 이리(ctx, 닉네임):
     service = Service(chrome_driver_path)
     options = webdriver.ChromeOptions()
@@ -549,7 +549,7 @@ async def 이리(ctx, 닉네임):
         await ctx.send(f"❌ {닉네임}님의 전적 정보를 가져오지 못했어요!")
 
     finally:
-        driver.quit()
+        driver.quit()'''
 
 load_dotenv()  # .env 파일 읽기
 TOKEN = os.getenv('DISCORD_TOKEN')  # .env에서 토큰 값 가져오기
